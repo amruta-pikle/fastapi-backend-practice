@@ -39,10 +39,22 @@ uvicorn app.main:app --reload
 > This section will grow as features are added.
 
 ### Endpoints List
+
+### SAMPLE
 - `GET /` → Welcome message
 - `GET /sample/` → Sample JSON response
 
----
+### DAY 1 ENDPOINTS
+- `POST /day1/items` → Create a new item
+
+- `GET /day1/items` → Get all items
+
+- `GET /day1/items/{item_id}` → Get item by ID
+
+- `PUT /day1/items/{item_id}` → Update item by ID
+
+- `DELETE /day1/items/{item_id}` → Delete item by ID
+
 
 ## Documentation
 - [HTTP Status Codes Notes](docs/status_codes.md)

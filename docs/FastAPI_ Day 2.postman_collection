@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "a495e85c-635d-4462-9d28-780f83eb730c",
+		"name": "FastAPI Day 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47595748",
+		"_collection_link": "https://pikleamruta-2731161.postman.co/workspace/Amruta-Pikle's-Workspace~da1455fc-fabd-44a5-86dc-9cc4270fd3f9/collection/47595748-a495e85c-635d-4462-9d28-780f83eb730c?action=share&source=collection_link&creator=47595748"
+	},
+	"item": [
+		{
+			"name": "POST Create Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"description\": \"Gaming laptop\",\r\n  \"price\": 1200.50\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/day1/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"day1",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/day1/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"day1",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get item By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/day1/items/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"day1",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Monitoe\",\r\n        \"description\": \"Gaming monitor\",\r\n        \"price\": 1200.5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/day1/items/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"day1",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Monitoe\",\r\n        \"description\": \"Gaming monitor\",\r\n        \"price\": 1200.5\r\n    }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/day1/items/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"day1",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
