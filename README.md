@@ -55,6 +55,13 @@ uvicorn app.main:app --reload
 
 - `DELETE /day1/items/{item_id}` → Delete item by ID
 
+### DAY 2 ENDPOINTS
+- `POST /day2/token` → Generate JWT access token using username & password
+
+- `GET /day2/secure-data` → Access secure data (requires valid Bearer token in header)
+
+
+
 
 ## Documentation
 - [HTTP Status Codes Notes](docs/status_codes.md)

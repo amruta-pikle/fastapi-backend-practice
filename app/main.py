@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.api import sample
 from app.day1 import endpoints
+from app.Day2 import routes,auth
 
 app = FastAPI(
     title="My Backend Learning Project",
@@ -15,6 +16,12 @@ app.include_router(sample.router)
 
 # Include day1 router
 app.include_router(endpoints.router)
+
+#Include day2 router
+app.include_router(routes.router)
+app.include_router(auth.router)
+
+
 
 @app.get("/")
 def read_root():
