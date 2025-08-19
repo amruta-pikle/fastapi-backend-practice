@@ -5,7 +5,7 @@ from app.day1.models import ItemOut, ItemIn
 
 router = APIRouter(
     prefix="/day1",
-    tags=["Day 1 Items"]
+    tags=["Model examples"]
 )
 
 #In-memory "database"

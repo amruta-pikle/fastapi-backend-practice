@@ -60,6 +60,13 @@ uvicorn app.main:app --reload
 
 - `GET /day2/secure-data` → Access secure data (requires valid Bearer token in header)
 
+### DAY 3 ENDPOINTS
+- `GET /custom_exception/custom/{name}` → Returns the name, but raises CustomException if name is "bad"
+
+- `GET /middleware/` → Simple home endpoint returning a welcome message
+
+- `GET /middleware/slow` → Simulates a slow request (waits 2 seconds before responding)
+
 
 
 

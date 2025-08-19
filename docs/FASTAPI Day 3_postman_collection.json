@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "aef4993a-de8d-4c57-a4eb-a32d52bb9e61",
+		"name": "FASTAPI Day 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47595748",
+		"_collection_link": "https://pikleamruta-2731161.postman.co/workspace/Amruta-Pikle's-Workspace~da1455fc-fabd-44a5-86dc-9cc4270fd3f9/collection/47595748-aef4993a-de8d-4c57-a4eb-a32d52bb9e61?action=share&source=collection_link&creator=47595748"
+	},
+	"item": [
+		{
+			"name": "Custom Exception with proper name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/custom_exception/custom/amruta",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"custom_exception",
+						"custom",
+						"amruta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Custom Exception with improper name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/custom_exception/custom/bad",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"custom_exception",
+						"custom",
+						"bad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple_Middleware_example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/middleware/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"middleware",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Middleware_example_with_delay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/middleware/slow",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"middleware",
+						"slow"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
