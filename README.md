@@ -68,6 +68,17 @@ uvicorn app.main:app --reload
 - `GET /middleware/slow` → Simulates a slow request (waits 2 seconds before responding)
 
 
+### DAY 4 ENDPOINTS
+- `POST /taskmanager/token` → Login endpoint
+
+- `POST /taskmanager/tasks` → Creates task only for admin role
+
+- `GET /taskmanager/tasks` → Returns all the tasks
+
+- `PUT /taskmanager/tasks/{task_id}` → Update the particular task only by admin
+
+- `DELETE /taskmanager/tasks/{task_id}` → Deletes the particular task only by admin
+
 
 
 ## Documentation
