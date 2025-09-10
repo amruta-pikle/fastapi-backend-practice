@@ -7,12 +7,18 @@ from app.day1 import endpoints
 from app.Day2 import routes, auth
 from app.Day3 import Custom_Exception_Handler
 from app.Task_Manager_API import task_manager_auth, tasks_endpoints
-from app.exceptions import exception_handlers
+from app.exceptions import exception_handlers, global_responses
 
 app = FastAPI(
     title="My Backend Learning Project",
     description="A project to practice backend development with FastAPI",
     version="1.0.0"
+)
+
+# Apply global error responses
+app = FastAPI(
+    title="Daywise FastAPI App",
+    responses=global_responses
 )
 
 

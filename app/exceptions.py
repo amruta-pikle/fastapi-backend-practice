@@ -1,5 +1,13 @@
 from fastapi import Request, status
 from fastapi.responses import JSONResponse
+from pydantic import BaseModel
+
+
+# Standard Error Response Model
+class ErrorResponse(BaseModel):
+    error: str
+    message: str
+    path: str
 
 #Base class for all the custom exceptions
 class CustomException(Exception):
@@ -26,11 +34,11 @@ class ValidationException(CustomException):
 async def custom_exception_handler(request: Request, exc: CustomException):
     return JSONResponse(
         status_code=exc.status_code,
-        content={
-            "error":exc.name,
-            "message":exc.detail,
-            "path": str(request.url)
-        },
+        content=ErrorResponse(
+            error=exc.name,
+            message=exc.detail,
+            path= str(request.url)
+        ).model_dump()
     )
 
 #Registry of exceptions to register main.py
@@ -39,4 +47,12 @@ exception_handlers = {
     NotFoundException : custom_exception_handler,
     UnauthorisedException : custom_exception_handler,
     ValidationException : custom_exception_handler,
+}
+
+# Common error responses dictionary
+global_responses = {
+    400: {"model": ErrorResponse, "description": "Bad Request"},
+    401: {"model": ErrorResponse, "description": "Unauthorized"},
+    404: {"model": ErrorResponse, "description": "Not Found"},
+    422: {"model": ErrorResponse, "description": "Validation Error"},
 }
