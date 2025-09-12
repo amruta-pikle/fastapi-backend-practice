@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "f35d58c6-7528-4b48-a3f9-92275749bdf9",
+		"name": "FastAPI Day4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47595748",
+		"_collection_link": "https://pikleamruta-2731161.postman.co/workspace/Amruta-Pikle's-Workspace~da1455fc-fabd-44a5-86dc-9cc4270fd3f9/collection/47595748-f35d58c6-7528-4b48-a3f9-92275749bdf9?action=share&source=collection_link&creator=47595748"
+	},
+	"item": [
+		{
+			"name": "Create_Note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "amruta",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "password1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"drink\",\r\n  \"content\": \"drink water\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notes/create_note",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notes",
+						"create_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "amruta",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "password1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"drink\",\r\n  \"content\": \"drink water\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notes By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "amruta",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "password1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"drink\",\r\n  \"content\": \"drink water\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notes/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Note By ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
