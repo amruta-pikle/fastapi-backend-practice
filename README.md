@@ -67,8 +67,15 @@ uvicorn app.main:app --reload
 
 - `GET /middleware/slow` → Simulates a slow request (waits 2 seconds before responding)
 
-
 ### DAY 4 ENDPOINTS
+- `POST /notes/create_note` → Creates a Note
+
+- `GET /notes/` → Returns Notes List
+
+- `GET /notes/{note_id}` → Returns Note by ID
+
+
+### TASK MANAGER ENDPOINTS
 - `POST /taskmanager/token` → Login endpoint
 
 - `POST /taskmanager/tasks` → Creates task only for admin role
