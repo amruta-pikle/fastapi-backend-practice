@@ -74,6 +74,15 @@ uvicorn app.main:app --reload
 
 - `GET /notes/{note_id}` → Returns Note by ID
 
+### DAY 5 ENDPOINTS
+- `POST /items-management/item` → Creates an Item
+
+- `GET /items-management/items` → Returns Items List
+
+- `GET /items-management/{item_id}` → Returns an Item by ID
+
+- `DELETE /items-management/{item_id}` → Deletes an Item by ID
+
 
 ### TASK MANAGER ENDPOINTS
 - `POST /taskmanager/token` → Login endpoint

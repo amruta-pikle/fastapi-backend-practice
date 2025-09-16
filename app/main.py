@@ -4,11 +4,12 @@ from fastapi import FastAPI, Request
 
 from app.api import sample
 from app.day1 import endpoints
-from app.Day2 import routes, auth
-from app.Day3 import Custom_Exception_Handler
+from app.day2 import routes, auth
+from app.day3 import Custom_Exception_Handler
 from app.Task_Manager_API import task_manager_auth, tasks_endpoints
 from app.exceptions import exception_handlers, global_responses
 from app.day4.routes import router as notes_router
+from app.day5.routes import router as item_router
 
 app = FastAPI(
     title="My Backend Learning Project",
@@ -48,16 +49,18 @@ for exc_class, handler in exception_handlers.items():
 # Sample router
 app.include_router(sample.router)
 
-
-
 # day1 router
 app.include_router(endpoints.router)
-
-
 
 # day2 routers
 app.include_router(routes.router)
 app.include_router(task_manager_auth.router)
+
+#day4 router
+app.include_router(notes_router)
+
+#day5 router
+app.include_router(item_router)
 
 
 
@@ -72,8 +75,7 @@ app.include_router(task_manager_auth.router)
 app.include_router(tasks_endpoints.router)
 
 
-#day4 router
-app.include_router(notes_router)
+
 
 
 
