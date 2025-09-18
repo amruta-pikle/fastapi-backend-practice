@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "fae34dd3-7c4d-40da-b199-1668bf83b03e",
+		"name": "FastAPI Day 5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47595748",
+		"_collection_link": "https://pikleamruta-2731161.postman.co/workspace/Amruta-Pikle's-Workspace~da1455fc-fabd-44a5-86dc-9cc4270fd3f9/collection/47595748-fae34dd3-7c4d-40da-b199-1668bf83b03e?action=share&source=collection_link&creator=47595748"
+	},
+	"item": [
+		{
+			"name": "Create item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"\",\r\n  \"description\": \"Blue Ink\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/items-management/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"items-management",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Book\",\r\n  \"description\": \"Historical book\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/items-management/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"items-management",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Book\",\r\n  \"description\": \"Historical book\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/items-management/items/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"items-management",
+						"items",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Item By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Book\",\r\n  \"description\": \"Historical book\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/items-management/items/9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"items-management",
+						"items",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
