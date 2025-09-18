@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "0cdc342f-c857-4f5b-9e3b-26fa131b9826",
+		"name": "FastAPI Day 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47595748",
+		"_collection_link": "https://pikleamruta-2731161.postman.co/workspace/Amruta-Pikle's-Workspace~da1455fc-fabd-44a5-86dc-9cc4270fd3f9/collection/47595748-0cdc342f-c857-4f5b-9e3b-26fa131b9826?action=share&source=collection_link&creator=47595748"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"amruta\",\r\n  \"password\": \"test123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth-example/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth-example",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AUTH PROTECTED",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbXJ1dGEiLCJleHAiOjE3NTgyMTg0MzB9._zxcpqW2HVD-YSopIlnTuDf9bjkHBkQ4fcOjymtGXnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"amruta\",\r\n  \"password\": \"test123\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth-example/protected",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth-example",
+						"protected"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

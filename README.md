@@ -84,6 +84,12 @@ uvicorn app.main:app --reload
 - `DELETE /items-management/{item_id}` → Deletes an Item by ID
 
 
+### DAY 6 ENDPOINTS
+- `POST /auth-example/login` → Login endpoint
+
+- `GET /auth-example/protected` → Checks the authenticity of the user
+
+
 ### TASK MANAGER ENDPOINTS
 - `POST /taskmanager/token` → Login endpoint
 

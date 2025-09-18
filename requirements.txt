@@ -3,3 +3,4 @@ uvicorn
 optional~=0.0.1
 pydantic~=2.11.7
 sqlalchemy
+PyJWT

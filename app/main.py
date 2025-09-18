@@ -10,6 +10,7 @@ from app.Task_Manager_API import task_manager_auth, tasks_endpoints
 from app.exceptions import exception_handlers, global_responses
 from app.day4.routes import router as notes_router
 from app.day5.routes import router as item_router
+from app.day6.auth_routes import router as auth_router
 
 app = FastAPI(
     title="My Backend Learning Project",
@@ -61,6 +62,9 @@ app.include_router(notes_router)
 
 #day5 router
 app.include_router(item_router)
+
+#day6 router
+app.include_router(auth_router)
 
 
 
